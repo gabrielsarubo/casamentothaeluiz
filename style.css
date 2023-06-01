@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: system-ui;
+  color: #fdfdfd;
+
+  background-image: url(./assets/img/weddingvenue-darker.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.counter__text {
+  font-size: 2.5em;
+  margin-top: .5em;
+}
+
+#countdowntimer {
+  /* display: inline-block;
+  white-space: nowrap; */
+  font-weight: 700;
+}
+
+:root {
+  --funkoWidth: 50px;
+  --funkoHeight: 100px;
+}
+
+.counter {
+  position: relative;
+}
+
+.counter::before {
+  position: absolute;
+  top: calc(var(--funkoHeight) * -1);
+  left: 0px;
+  content: '';
+  display: block;
+  width: calc(var(--funkoWidth) + 100px);
+  height: var(--funkoHeight);
+
+  /* background-color: blueviolet; */
+  background-image: url('./assets/img/luisfunko.png'), url('./assets/img/thaisfunko.png');
+  background-position-x: 0px, 60px;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: auto var(--funkoHeight);
+}
+
+.rainbow {
+  background: red;
+  background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+  background: -o-linear-gradient(right, red, orange, yellow, green, blue, indigo, violet);
+  background: -moz-linear-gradient(right, red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rainbowline {
+  text-decoration-line: underline;
+  text-decoration-thickness: .15em;
+  text-decoration-color: rgba(255, 255, 255, 0.15);
+}
+
+#myAudio {
+  display: none;
+}
